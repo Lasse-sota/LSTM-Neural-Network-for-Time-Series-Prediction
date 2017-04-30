@@ -29,7 +29,7 @@ if __name__=='__main__':
 
 	print('> Loading data... ')
 
-	X_train, y_train, X_test, y_test = lstm.load_data('DAT_MT_EURUSD_M1_201704.csv', seq_len, True)
+	X_train, y_train, X_test, y_test = lstm.load_data('HistoricalQuotes.csv', seq_len, True)
 
 	print('> Data Loaded. Compiling...')
 
