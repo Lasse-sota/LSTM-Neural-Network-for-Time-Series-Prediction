@@ -24,8 +24,8 @@ def plot_results_multiple(predicted_data, true_data, prediction_len):
 #Main Run Thread
 if __name__=='__main__':
 	global_start_time = time.time()
-	epochs  = 50
-	seq_len = 50
+	epochs  = 25
+	seq_len = 10
 
 	print('> Loading data... ')
 
@@ -42,9 +42,9 @@ if __name__=='__main__':
 	    nb_epoch=epochs,
 	    validation_split=0.05)
 
-	predictions = lstm.predict_sequences_multiple(model, X_test, seq_len, 50)
+	predictions = lstm.predict_sequences_multiple(model, X_test, seq_len, 10)
 	#predicted = lstm.predict_sequence_full(model, X_test, seq_len)
 	#predicted = lstm.predict_point_by_point(model, X_test)        
 
 	print('Training duration (s) : ', time.time() - global_start_time)
-	plot_results_multiple(predictions, y_test, 50)
+	plot_results_multiple(predictions, y_test, 10)
