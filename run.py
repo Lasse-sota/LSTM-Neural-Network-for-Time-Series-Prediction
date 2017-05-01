@@ -42,9 +42,9 @@ if __name__=='__main__':
 	    nb_epoch=epochs,
 	    validation_split=0.05)
 
-	predictions = lstm.predict_sequences_multiple(model, X_test, seq_len, 10)
+	predictions = lstm.predict_sequences_multiple(model, X_test, seq_len, 50)
 	#predicted = lstm.predict_sequence_full(model, X_test, seq_len)
 	#predicted = lstm.predict_point_by_point(model, X_test)        
 
 	print('Training duration (s) : ', time.time() - global_start_time)
-	plot_results_multiple(predictions, y_test, 10)
+	plot_results_multiple(predictions, y_test, 50)
